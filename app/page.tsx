@@ -1,23 +1,6 @@
-"use client";
-
-import { useState } from 'react';
 import Image from 'next/image';
 
 export default function Home() {
-  const [imageSrc, setImageSrc] = useState<string>('/profile-placeholder.png');
-
-  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        if (typeof reader.result === 'string') {
-          setImageSrc(reader.result);
-        }
-      };
-      reader.readAsDataURL(file);
-    }
-  };
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gradient-to-r from-blue-50 to-indigo-50">
@@ -38,14 +21,7 @@ export default function Home() {
                   className="rounded-full"
                 />
               </div>
-            </label>
-            <input
-              id="profile-upload"
-              type="file"
-              accept="image/*"
-              onChange={handleImageUpload}
-              className="hidden"
-            />
+            </label> 
           </div>
           <div className="flex-grow flex flex-col justify-center">
             <h1 className="text-3xl font-bold mb-6">À Propos de Moi</h1>
