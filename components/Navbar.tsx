@@ -11,7 +11,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { href: "/", label: "À Propos" },
+    { href: "/", label: "Accueil" },
     { href: "/skills", label: "Compétences" },
     { href: "/projects", label: "Projets" },
     { href: "/bts-sio", label: "BTS SIO" },
@@ -20,40 +20,54 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md shadow-sm z-50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-200/90 to-purple-200/90 backdrop-blur-md border-b border-blue-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
+        <div className="flex justify-between h-16">
+          <div className="flex">
+            <div className="flex-shrink-0 flex items-center">
+              <Link
+                href="/"
+                className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-blue-700 hover:to-purple-700 transition-all"
+              >
+                Alexandre Chambraud
+              </Link>
+            </div>
+            <div className="hidden md:flex md:space-x-8 ml-8">
+              <ul className="flex space-x-8">
+                {navItems.map(({ href, label }) => (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      className={`inline-flex items-center px-4 py-2 text-base font-medium rounded-lg transition-all duration-200 ${
+                        pathname === href
+                          ? "bg-white/50 text-[#1E3A8A] shadow-sm"
+                          : "text-[#1E3A8A] hover:bg-white/30"
+                      }`}
+                    >
+                      {pathname === href && (
+                        <motion.span
+                          layoutId="underline"
+                          className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3B82F6]"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 0.2 }}
+                        />
+                      )}
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
           <div className="flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-gray-900 focus:outline-none"
+              className="text-gray-700 hover:text-gray-900"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
-          </div>
-          
-          <div className="hidden md:flex justify-center flex-1">
-            <ul className="flex space-x-8">
-              {navItems.map(({ href, label }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    className="relative inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors duration-200"
-                  >
-                    {pathname === href && (
-                      <motion.span
-                        layoutId="underline"
-                        className="absolute left-0 right-0 bottom-0 h-0.5 bg-blue-600"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.2 }}
-                      />
-                    )}
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </div>
@@ -72,7 +86,7 @@ const Navbar = () => {
                   <Link
                     href={href}
                     onClick={() => setIsOpen(false)}
-                    className={`block px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
+                    className={`block px-4 py-2 text-base font-medium rounded-lg transition-all duration-200 ${
                       pathname === href
                         ? "bg-blue-50 text-blue-600"
                         : "text-gray-900 hover:bg-gray-50"
@@ -91,4 +105,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-

@@ -1,11 +1,10 @@
 "use client"
 
-import Footer from "@/components/Footer"
-import Navbar from "@/components/Navbar"
-import { motion } from "framer-motion"
+import "./globals.css"
 import { Inter } from "next/font/google"
 import type React from "react"
-import "./globals.css"
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -16,18 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className="scroll-smooth">
-      <body className={`${inter.className} antialiased min-h-screen flex flex-col bg-gradient-to-br from-blue-50 via-white to-purple-50`}>
+      <body className={`${inter.className} bg-gradient-to-br from-blue-100 via-purple-100 to-blue-100 text-[#1E3A8A] min-h-screen flex flex-col`}>
         <div className="fixed inset-0 bg-[url('/images/grid.svg')] opacity-5 pointer-events-none" />
         <Navbar />
-        <main className="flex-1 pt-20 px-4 max-w-7xl mx-auto w-full relative">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="w-full"
-          >
-            {children}
-          </motion.div>
+        <main className="flex-1 pt-20 px-4 relative">
+          {children}
         </main>
         <Footer />
       </body>

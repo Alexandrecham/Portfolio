@@ -25,9 +25,16 @@ const SkillSection = ({
       <h2 className="text-xl font-semibold">{title}</h2>
     </div>
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full mx-auto">
-      {skills.map((skill, index) => (
+      {skills.slice(0, 8).map((skill, index) => (
         <SkillCard key={index} {...skill} />
       ))}
+      <div className="col-span-2 md:col-span-4">
+        <div className="grid grid-cols-3 gap-4 max-w-[600px] mx-auto">
+          {skills.slice(8).map((skill, index) => (
+            <SkillCard key={index + 8} {...skill} />
+          ))}
+        </div>
+      </div>
     </div>
   </div>
 )
@@ -65,6 +72,18 @@ export default function Skills() {
     {
       icon: <Code2 size={32} className="text-[#003545]" />,
       name: "MariaDB"
+    },
+    {
+      icon: <Code2 size={32} className="text-[#7952B3]" />,
+      name: "Bootstrap"
+    },
+    {
+      icon: <Code2 size={32} className="text-[#6C78AF]" />,
+      name: "phpMyAdmin"
+    },
+    {
+      icon: <Code2 size={32} className="text-[#61AFFE]" />,
+      name: "API REST"
     }
   ]
 
@@ -95,4 +114,3 @@ export default function Skills() {
     </div>
   )
 }
-
