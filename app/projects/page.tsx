@@ -40,28 +40,6 @@ const ProjectCard = ({ project }: { project: Project }) => (
           </span>
         ))}
       </div>
-      <div className="flex gap-4">
-        {project.githubLink && (
-          <Link
-            href={project.githubLink}
-            target="_blank"
-            className="flex items-center gap-2 text-gray-600 hover:text-gray-900"
-          >
-            <Github size={20} />
-            <span>Code</span>
-          </Link>
-        )}
-        {project.demoLink && (
-          <Link
-            href={project.demoLink}
-            target="_blank"
-            className="flex items-center gap-2 text-gray-600 hover:text-gray-900"
-          >
-            <LinkIcon size={20} />
-            <span>Demo</span>
-          </Link>
-        )}
-      </div>
     </div>
   </div>
 );
