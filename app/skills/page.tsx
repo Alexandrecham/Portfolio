@@ -1,4 +1,17 @@
-import { Code2, Lock, Network, Server, Workflow } from "lucide-react";
+import { 
+  Code2, 
+  Lock, 
+  Network, 
+  Server, 
+  Workflow, 
+  Database, 
+  Globe, 
+  FileJson, 
+  Cpu,
+  ShieldCheck,
+  Wifi,
+  MonitorSmartphone
+} from "lucide-react";
 import type React from "react";
 
 const SkillCard = ({ icon, name }: { icon: React.ReactNode; name: string }) => (
@@ -42,56 +55,121 @@ const SkillSection = ({
 export default function Skills() {
   const devSkills = [
     { 
-      icon: <Code2 size={32} className="text-[#E44D26]" />,
+      icon: (
+        <div className="relative">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-[#E44D26] font-bold text-2xl">&lt;/&gt;</div>
+          </div>
+        </div>
+      ),
       name: "HTML/CSS" 
     },
     { 
-      icon: <Code2 size={32} className="text-[#F7DF1E]" />,
+      icon: (
+        <div className="relative bg-[#F7DF1E] rounded-md w-8 h-8 flex items-center justify-center">
+          <div className="text-black font-bold text-xl">JS</div>
+        </div>
+      ),
       name: "JavaScript" 
     },
     { 
-      icon: <Code2 size={32} className="text-[#61DAFB]" />,
+      icon: (
+        <div className="relative">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.5 -10.23174 23 20.46348" width="32" height="32">
+            <circle cx="0" cy="0" r="2.05" fill="#61dafb"/>
+            <g stroke="#61dafb" strokeWidth="1" fill="none">
+              <ellipse rx="11" ry="4.2"/>
+              <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
+              <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
+            </g>
+          </svg>
+        </div>
+      ),
       name: "React" 
     },
     {
-      icon: <Code2 size={32} className="text-black" />,
+      icon: (
+        <div className="relative">
+          <div className="text-black">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+          </div>
+        </div>
+      ),
       name: "Next.js"
     },
     {
-      icon: <Code2 size={32} className="text-[#007396]" />,
+      icon: (
+        <div className="relative">
+          <div className="text-[#007396]">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6" />
+              <line x1="2" y1="20" x2="2" y2="20" />
+            </svg>
+          </div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-[#007396] font-bold">J</div>
+          </div>
+        </div>
+      ),
       name: "Java"
     },
     {
-      icon: <Code2 size={32} className="text-[#336791]" />,
+      icon: <Database size={32} className="text-[#336791]" />,
       name: "PostgreSQL"
     },
     {
-      icon: <Code2 size={32} className="text-[#777BB4]" />,
+      icon: (
+        <div className="relative bg-[#777BB4] rounded-md w-8 h-8 flex items-center justify-center">
+          <div className="text-white font-bold text-sm">PHP</div>
+        </div>
+      ),
       name: "PHP"
     },
     {
-      icon: <Code2 size={32} className="text-[#003545]" />,
+      icon: <Database size={32} className="text-[#003545]" />,
       name: "MariaDB"
     },
     {
-      icon: <Code2 size={32} className="text-[#7952B3]" />,
+      icon: (
+        <div className="relative bg-[#7952B3] rounded-md w-8 h-8 flex items-center justify-center">
+          <div className="text-white font-bold text-sm">B</div>
+        </div>
+      ),
       name: "Bootstrap"
     },
     {
-      icon: <Code2 size={32} className="text-[#6C78AF]" />,
+      icon: (
+        <div className="relative bg-[#6C78AF] rounded-md w-8 h-8 flex items-center justify-center">
+          <div className="text-white font-bold text-sm">pMA</div>
+        </div>
+      ),
       name: "phpMyAdmin"
     },
     {
-      icon: <Code2 size={32} className="text-[#61AFFE]" />,
+      icon: <FileJson size={32} className="text-[#61AFFE]" />,
       name: "API REST"
     }
   ]
 
   const networkSkills = [
-    { icon: <Network size={32} className="text-blue-500" />, name: "TCP/IP" },
-    { icon: <Server size={32} className="text-green-500" />, name: "Systèmes" },
-    { icon: <Lock size={32} className="text-red-500" />, name: "Sécurité" },
-    { icon: <Workflow size={32} className="text-purple-500" />, name: "Réseaux" },
+    { 
+      icon: <Network size={32} className="text-blue-500" />, 
+      name: "TCP/IP" 
+    },
+    { 
+      icon: <Cpu size={32} className="text-green-500" />, 
+      name: "Systèmes" 
+    },
+    { 
+      icon: <ShieldCheck size={32} className="text-red-500" />, 
+      name: "Sécurité" 
+    },
+    { 
+      icon: <Wifi size={32} className="text-purple-500" />, 
+      name: "Réseaux" 
+    },
   ]
 
   return (
@@ -111,6 +189,7 @@ export default function Skills() {
           />
         </div>
       </div>
+      <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-blue-100 via-white to-blue-50"></div>
     </div>
   )
 }

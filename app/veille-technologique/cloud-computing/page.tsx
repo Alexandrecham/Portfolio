@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useRef } from 'react';
-import Link from 'next/link';
+import { useState } from 'react';
 
 interface TimelineEvent {
   year: string;
@@ -31,7 +30,6 @@ interface CloudTrend {
 export default function CloudComputing() {
   const [selectedTrend, setSelectedTrend] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<string>('iaas');
-  const contentRef = useRef<HTMLDivElement>(null);
 
   const cloudTrends: CloudTrend[] = [
     {
@@ -66,15 +64,15 @@ export default function CloudComputing() {
 
   const timelineEvents: TimelineEvent[] = [
     {
-      year: '2022',
+      year: '2023',
       title: 'Démocratisation du Multi-Cloud',
       description: 'Adoption massive des stratégies multi-cloud par les entreprises',
       icon: '☁️',
       iconColor: 'bg-blue-500',
-      source: 'Gartner - State of Cloud 2022'
+      source: 'Gartner - State of Cloud 2023'
     },
     {
-      year: '2023',
+      year: '2024',
       title: 'Explosion de l\'Edge Computing',
       description: 'Croissance rapide des solutions edge computing avec la 5G',
       icon: '📡',
@@ -82,7 +80,7 @@ export default function CloudComputing() {
       source: 'IDC - Edge Computing Market Analysis'
     },
     {
-      year: '2024',
+      year: '2025',
       title: 'Cloud Souverain et FinOps',
       description: 'Émergence des clouds souverains et optimisation des coûts',
       icon: '🔒',
@@ -131,9 +129,9 @@ export default function CloudComputing() {
         <section className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-2xl font-semibold mb-6 text-blue-700 border-b pb-2">Tendances Majeures</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {cloudTrends.map((trend) => (
+            {cloudTrends.map((trend, index) => (
               <div
-                key={trend.name}
+                key={index}
                 className={`p-6 rounded-lg cursor-pointer transition-all ${
                   selectedTrend === trend.name
                     ? 'ring-2 ring-blue-500 shadow-lg'
@@ -164,7 +162,7 @@ export default function CloudComputing() {
           <h2 className="text-2xl font-semibold mb-6 text-blue-700 border-b pb-2">Chronologie des Événements Clés</h2>
           <div className="space-y-8">
             {timelineEvents.map((event, index) => (
-              <div key={event.year} className="flex gap-4">
+              <div key={index} className="flex gap-4">
                 <div className={`flex-shrink-0 w-12 h-12 ${event.iconColor} rounded-full flex items-center justify-center text-white`}>
                   {event.icon}
                 </div>
@@ -193,9 +191,9 @@ export default function CloudComputing() {
           <h2 className="text-2xl font-semibold mb-6 text-blue-700 border-b pb-2">Architectures Cloud</h2>
           <div className="space-y-6">
             <div className="flex gap-4 border-b">
-              {Object.entries(cloudArchitecture).map(([key, component]) => (
+              {Object.entries(cloudArchitecture).map(([key, component], index) => (
                 <button
-                  key={key}
+                  key={index}
                   className={`px-4 py-2 font-medium transition-colors ${
                     activeTab === key
                       ? component.color + ' border-b-2 border-current'
@@ -208,17 +206,17 @@ export default function CloudComputing() {
               ))}
             </div>
             <div className="p-4">
-              {Object.entries(cloudArchitecture).map(([key, component]) => (
+              {Object.entries(cloudArchitecture).map(([key, component], index) => (
                 <div
-                  key={key}
+                  key={index}
                   className={`space-y-4 ${activeTab === key ? 'block' : 'hidden'}`}
                 >
                   <p className="text-gray-700">{component.description}</p>
                   <div className="bg-gray-50 p-4 rounded-lg">
                     <h4 className="font-medium mb-2">Exemples populaires :</h4>
                     <ul className="list-disc list-inside space-y-1 text-gray-600">
-                      {component.examples.map((example) => (
-                        <li key={example}>{example}</li>
+                      {component.examples.map((example, index) => (
+                        <li key={`${example}-${index}`}>{example}</li>
                       ))}
                     </ul>
                   </div>
@@ -255,8 +253,8 @@ export default function CloudComputing() {
             <div>
               <h3 className="text-xl font-semibold mb-3 text-gray-800">Tendances Cloud</h3>
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                <li><span className="font-medium">État du Cloud :</span> Gartner - <a href="https://www.gartner.com/cloud" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">State of Cloud 2024</a></li>
-                <li><span className="font-medium">Edge Computing :</span> IDC - Edge Computing Market Analysis 2024</li>
+                <li><span className="font-medium">État du Cloud :</span> Gartner - <a href="https://www.gartner.com/cloud" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">State of Cloud 2025</a></li>
+                <li><span className="font-medium">Edge Computing :</span> IDC - Edge Computing Market Analysis 2025</li>
                 <li><span className="font-medium">Green Cloud :</span> Green Cloud Computing - Trends and Challenges</li>
               </ul>
             </div>
