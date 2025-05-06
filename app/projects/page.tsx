@@ -14,6 +14,7 @@ interface Project {
   demoLink?: string;
   mcdFile?: string;
   mcdViewUrl?: string;
+  documentationLink?: string;
 }
 
 const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => void }) => {
@@ -98,6 +99,16 @@ const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => v
                   className="bg-gray-900 text-white px-6 py-2 rounded-md hover:bg-gray-800 transition-colors"
                 >
                   Voir sur GitHub
+                </a>
+              )}
+              {project.documentationLink && (
+                <a
+                  href={project.documentationLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-purple-600 text-white px-6 py-2 rounded-md hover:bg-purple-700 transition-colors"
+                >
+                  Documentation
                 </a>
               )}
               {project.demoLink && (

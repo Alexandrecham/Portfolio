@@ -8,6 +8,7 @@ export interface Project {
   demoLink?: string;
   mcdFile?: string;
   mcdViewUrl?: string;
+  documentationLink?: string;
 }
 
 export const projects: Project[] = [
@@ -35,6 +36,7 @@ export const projects: Project[] = [
     detailedDescription: "Plateforme web complète pour l'organisation et la gestion de tournois e-sport. Cette application full-stack offre une solution clé en main pour les organisateurs de tournois e-sport. Caractéristiques principales :\n\n• Interface d'inscription des équipes avec validation des rosters\n• Générateur automatique de brackets (simple et double élimination)\n• Système de scoring en temps réel avec validation des résultats\n• Panel administrateur complet pour la gestion des tournois\n• Intégration avec Discord pour les notifications\n• Système de streaming intégré avec overlay personnalisable\n• Statistiques détaillées des équipes et joueurs\n• Module de paiement sécurisé pour les inscriptions\n• Communication en temps réel via WebSocket",
     technologies: ["PHP", "MySQL", "JavaScript", "HTML/CSS", "Bootstrap"],
     image: "/esp.jpg",
-    githubLink: "https://github.com/Alexandrecham/esport-tournament"
+    githubLink: "https://github.com/Nicolas-Kadir-Efrei/Projet-BTS-E6",
+    documentationLink: "https://drive.google.com/drive/folders/1KT_sPHAEBwH8If7PqviIypUsEtOewPOA?usp=sharing"
   }
 ];
