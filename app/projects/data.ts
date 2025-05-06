@@ -15,7 +15,7 @@ export const projects: Project[] = [
   {
     title: "Application Météo React",
     description: "Application web météorologique interactive développée avec React, utilisant une API météo pour afficher les prévisions en temps réel.",
-    detailedDescription: "Application web météorologique interactive développée avec React, utilisant une API météo pour afficher les prévisions en temps réel. L'application permet aux utilisateurs de rechercher la météo par ville et affiche des informations détaillées comme la température, l'humidité et les prévisions sur plusieurs jours. Fonctionnalités principales :\n• Recherche de villes avec autocomplétion\n• Affichage des conditions météorologiques actuelles\n• Prévisions horaires sur 24h\n• Prévisions détaillées sur 7 jours\n• Sauvegarde des villes favorites",
+    detailedDescription: "Application web météorologique interactive développée avec React, utilisant une API météo pour afficher les prévisions en temps réel. L'application permet aux utilisateurs de rechercher la météo par ville et affiche des informations détaillées comme la température, l'humidité et les prévisions sur plusieurs jours. Fonctionnalités principales :\n• Affichage des conditions météorologiques actuelles\n• Prévisions horaires sur 24h\n• Prévisions détaillées sur 7 jours",
     technologies: ["React", "HTML", "CSS", "JavaScript", "API REST"],
     image: "/meteo-app.jpg",
     githubLink: "https://github.com/Alexandrecham/meteo-app",
