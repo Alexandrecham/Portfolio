@@ -161,6 +161,19 @@ export default function Skills() {
       icon: (
         <div className="relative">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="4" fill="#FFA500"/>
+            <path d="M8 8h16v16H8z" fill="white"/>
+            <path d="M12 12h8v2h-8zM12 16h8v2h-8z" fill="#FFA500"/>
+            <path d="M10 10l12 12M22 10L10 22" stroke="#FFA500" strokeWidth="2"/>
+          </svg>
+        </div>
+      ),
+      name: "Star UML"
+    },
+    {
+      icon: (
+        <div className="relative">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
             <rect width="32" height="32" rx="4" fill="#0079BF"/>
             <rect x="6" y="8" width="6" height="16" rx="2" fill="white"/>
             <rect x="14" y="8" width="6" height="12" rx="2" fill="white"/>
@@ -174,13 +187,14 @@ export default function Skills() {
       icon: (
         <div className="relative">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <path d="M6 4V28H26V4H6Z" fill="#F2C811"/>
-            <path d="M14.5 8H10.5V12H14.5V8Z" fill="white"/>
-            <path d="M21.5 8H17.5V12H21.5V8Z" fill="white"/>
-            <path d="M14.5 14H10.5V18H14.5V14Z" fill="white"/>
-            <path d="M21.5 14H17.5V18H21.5V14Z" fill="white"/>
-            <path d="M14.5 20H10.5V24H14.5V20Z" fill="white"/>
-            <path d="M21.5 20H17.5V24H21.5V20Z" fill="white"/>
+            <rect width="32" height="32" rx="4" fill="#F2C811"/>
+            <path d="M6 4V28H26V4H6Z" fill="white"/>
+            <path d="M14.5 8H10.5V12H14.5V8Z" fill="#F2C811"/>
+            <path d="M21.5 8H17.5V12H21.5V8Z" fill="#F2C811"/>
+            <path d="M14.5 14H10.5V18H14.5V14Z" fill="#F2C811"/>
+            <path d="M21.5 14H17.5V18H21.5V14Z" fill="#F2C811"/>
+            <path d="M14.5 20H10.5V24H14.5V20Z" fill="#F2C811"/>
+            <path d="M21.5 20H17.5V24H21.5V20Z" fill="#F2C811"/>
           </svg>
         </div>
       ),
