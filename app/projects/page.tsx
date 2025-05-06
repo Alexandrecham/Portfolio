@@ -11,6 +11,9 @@ interface Project {
   technologies: string[];
   image: string;
   githubLink?: string;
+  demoLink?: string;
+  mcdFile?: string;
+  mcdViewUrl?: string;
 }
 
 const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => void }) => {
@@ -86,8 +89,8 @@ const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => v
                 </span>
               ))}
             </div>
-            {project.githubLink && (
-              <div className="flex">
+            <div className="flex flex-wrap gap-4">
+              {project.githubLink && (
                 <a
                   href={project.githubLink}
                   target="_blank"
@@ -96,8 +99,37 @@ const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => v
                 >
                   Voir sur GitHub
                 </a>
-              </div>
-            )}
+              )}
+              {project.demoLink && (
+                <a
+                  href={project.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                >
+                  Voir la démo
+                </a>
+              )}
+              {project.mcdViewUrl && (
+                <a
+                  href={project.mcdViewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 transition-colors"
+                >
+                  Voir le MCD
+                </a>
+              )}
+              {project.mcdFile && (
+                <a
+                  href={project.mcdFile}
+                  download
+                  className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                >
+                  Télécharger le MCD
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </div>

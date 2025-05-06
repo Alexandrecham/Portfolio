@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prévisualisation MCD - Base de Données Twitch</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            color: #6441a5; /* Couleur Twitch */
+            margin-bottom: 0.5rem;
+        }
+        .description {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        .mcd-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .download-btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        .download-btn:hover {
+            background-color: #1d4ed8;
+        }
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: #666;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MCD Base de Données Twitch</h1>
+            <p class="description">Modèle Conceptuel de Données pour un système inspiré de Twitch</p>
+        </header>
+        
+        <main>
+            <img src="MCD.png" alt="Modèle Conceptuel de Données Twitch" class="mcd-image">
+            
+            <div style="text-align: center;">
+                <a href="MCD + MLD.loo" download class="download-btn">Télécharger le fichier MCD (.loo)</a>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 - Projet réalisé dans le cadre du BTS SIO SLAM</p>
+        </footer>
+    </div>
+</body>
+</html>

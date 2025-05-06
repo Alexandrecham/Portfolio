@@ -53,7 +53,7 @@ const SkillSection = ({
 )
 
 export default function Skills() {
-  const devSkills = [
+  const frontendSkills = [
     { 
       icon: (
         <div className="relative">
@@ -101,6 +101,17 @@ export default function Skills() {
     },
     {
       icon: (
+        <div className="relative bg-[#7952B3] rounded-md w-8 h-8 flex items-center justify-center">
+          <div className="text-white font-bold text-sm">B</div>
+        </div>
+      ),
+      name: "Bootstrap"
+    }
+  ]
+
+  const backendSkills = [
+    {
+      icon: (
         <div className="relative">
           <div className="text-[#007396]">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -133,23 +144,58 @@ export default function Skills() {
     },
     {
       icon: (
-        <div className="relative bg-[#7952B3] rounded-md w-8 h-8 flex items-center justify-center">
-          <div className="text-white font-bold text-sm">B</div>
-        </div>
-      ),
-      name: "Bootstrap"
-    },
-    {
-      icon: (
         <div className="relative bg-[#6C78AF] rounded-md w-8 h-8 flex items-center justify-center">
           <div className="text-white font-bold text-sm">pMA</div>
         </div>
       ),
       name: "phpMyAdmin"
-    },
+    }
+  ]
+
+  const otherSkills = [
     {
       icon: <FileJson size={32} className="text-[#61AFFE]" />,
       name: "API REST"
+    },
+    {
+      icon: (
+        <div className="relative">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M6 4V28H26V4H6Z" fill="#F2C811"/>
+            <path d="M14.5 8H10.5V12H14.5V8Z" fill="white"/>
+            <path d="M21.5 8H17.5V12H21.5V8Z" fill="white"/>
+            <path d="M14.5 14H10.5V18H14.5V14Z" fill="white"/>
+            <path d="M21.5 14H17.5V18H21.5V14Z" fill="white"/>
+            <path d="M14.5 20H10.5V24H14.5V20Z" fill="white"/>
+            <path d="M21.5 20H17.5V24H21.5V20Z" fill="white"/>
+          </svg>
+        </div>
+      ),
+      name: "Power BI"
+    },
+    {
+      icon: (
+        <div className="relative bg-[#0078D4] rounded-md w-8 h-8 flex items-center justify-center">
+          <div className="text-white font-bold text-sm">M</div>
+        </div>
+      ),
+      name: "Suite Microsoft"
+    },
+    {
+      icon: (
+        <div className="relative bg-[#F80000] rounded-md w-8 h-8 flex items-center justify-center">
+          <div className="text-white font-bold text-sm">SQL</div>
+        </div>
+      ),
+      name: "SQL Developer"
+    },
+    {
+      icon: (
+        <div className="relative bg-[#0066B3] rounded-md w-8 h-8 flex items-center justify-center">
+          <div className="text-white font-bold text-sm">MS</div>
+        </div>
+      ),
+      name: "MicroStrategy"
     }
   ]
 
@@ -169,24 +215,54 @@ export default function Skills() {
     { 
       icon: <Wifi size={32} className="text-purple-500" />, 
       name: "Réseaux" 
-    },
+    }
   ]
 
   return (
     <div className="min-h-[calc(100vh-12rem)] py-6">
-      <div className="max-w-4xl mx-auto space-y-8">
+      <div className="max-w-5xl mx-auto space-y-8">
         <h1 className="text-3xl font-bold text-center mb-8">Mes Compétences</h1>
-        <div className="space-y-10">
-          <SkillSection 
-            title="Développement" 
-            icon={<Code2 size={20} />} 
-            skills={devSkills} 
-          />
-          <SkillSection 
-            title="Systèmes & Réseaux" 
-            icon={<Server size={20} />} 
-            skills={networkSkills} 
-          />
+        
+        {/* Grid pour Front-end et Back-end */}
+        <div className="grid md:grid-cols-2 gap-16 relative">
+          {/* Ligne de séparation verticale */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gray-200 hidden md:block transform -translate-x-1/2"></div>
+          
+          {/* Section Front-end */}
+          <div className="bg-white/50 backdrop-blur-sm rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+            <SkillSection 
+              title="Front-end" 
+              icon={<MonitorSmartphone size={20} />} 
+              skills={frontendSkills} 
+            />
+          </div>
+
+          {/* Section Back-end */}
+          <div className="bg-white/50 backdrop-blur-sm rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+            <SkillSection 
+              title="Back-end" 
+              icon={<Server size={20} />} 
+              skills={backendSkills} 
+            />
+          </div>
+        </div>
+
+        {/* Autres compétences et Réseaux en dessous */}
+        <div className="space-y-8">
+          <div className="bg-white/50 backdrop-blur-sm rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+            <SkillSection 
+              title="Autres Compétences" 
+              icon={<Workflow size={20} />} 
+              skills={otherSkills} 
+            />
+          </div>
+          <div className="bg-white/50 backdrop-blur-sm rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+            <SkillSection 
+              title="Compétences Réseau" 
+              icon={<Network size={20} />} 
+              skills={networkSkills} 
+            />
+          </div>
         </div>
       </div>
       <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-blue-100 via-white to-blue-50"></div>
