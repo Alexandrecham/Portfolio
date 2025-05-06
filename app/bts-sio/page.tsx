@@ -80,7 +80,7 @@ export default function BTSSIO() {
         
         <div className="mt-6">
           <a
-            href="/tdc.pdf"
+            href="/Tableau Compétences.pdf"
             download
             className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
           >
