@@ -83,8 +83,7 @@ export default function BTSSIO() {
             </p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
               <li>Analyse statistique des vulnérabilités de sécurité informatique au sein des métiers de l'entreprise</li>
-              <li>Apprentissage des méthodes et outils du métier de RSSI (Responsable de la Sécurité des Systèmes d'Information)</li>
-              <li>Formation aux techniques de détection et neutralisation des menaces (CTH - Cyber Threat Hunting)</li>
+              <li>Découverte des métiers RSSI et CTH à travers une journée d'immersion avec les équipes</li>
               <li>Participation à la sensibilisation des employés aux bonnes pratiques de sécurité informatique</li>
             </ul>
           </div>
@@ -95,7 +94,8 @@ export default function BTSSIO() {
           <div className="bg-white/90 p-5 rounded-lg shadow-md mb-4">
             <h3 className="text-xl font-medium mb-3">Cours et projets</h3>
             <p className="mb-3 text-gray-700">
-              En deuxième année, j'ai approfondi mes connaissances en me concentrant particulièrement sur le développement et la cybersécurité. J'ai réalisé trois projets majeurs :
+              En deuxième année, nos cours se sont concentrés sur l'approfondissement des compétences en développement et en cybersécurité. 
+              Durant cette année, j'ai réalisé trois projets majeurs :
             </p>
             <ul className="list-disc pl-6 mb-4 text-gray-700 space-y-2">
               <li><span className="font-medium">Application Météo React</span> : Développement d'une application web interactive utilisant l'API météo pour afficher les prévisions en temps réel.</li>
@@ -113,11 +113,10 @@ export default function BTSSIO() {
               <span className="font-medium">GRDF, Data Analyst MOE</span> — Alternance en 2ème année de BTS à Saint Denis (93000), septembre 2024-juillet 2025
             </p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
-              <li>Développement et optimisation d'outils via requêtes SQL pour l'analyse de données</li>
               <li>Travail sur les contrats d'interface et les habilitations pour sécuriser l'accès aux données sensibles</li>
               <li>Préparation et présentation lors des comités opérationnels</li>
-              <li>Participation à l'amélioration continue des processus de gestion des données</li>
-              <li>Collaboration avec les équipes techniques et métiers pour répondre aux besoins d'analyse</li>
+              <li>Recette des outils via requêtes SQL</li>
+              <li>Application des besoins métiers dans nos outils</li>
             </ul>
           </div>
         </section>
