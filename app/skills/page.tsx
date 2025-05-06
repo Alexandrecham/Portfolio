@@ -161,6 +161,19 @@ export default function Skills() {
       icon: (
         <div className="relative">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="4" fill="#0079BF"/>
+            <rect x="6" y="8" width="6" height="16" rx="2" fill="white"/>
+            <rect x="14" y="8" width="6" height="12" rx="2" fill="white"/>
+            <rect x="22" y="8" width="6" height="8" rx="2" fill="white"/>
+          </svg>
+        </div>
+      ),
+      name: "Trello"
+    },
+    {
+      icon: (
+        <div className="relative">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
             <path d="M6 4V28H26V4H6Z" fill="#F2C811"/>
             <path d="M14.5 8H10.5V12H14.5V8Z" fill="white"/>
             <path d="M21.5 8H17.5V12H21.5V8Z" fill="white"/>

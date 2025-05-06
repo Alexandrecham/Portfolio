@@ -1,3 +1,5 @@
+import { Code2, Server, Cpu } from "lucide-react";
+
 export default function BTSSIO() {
   return (
     <div className="min-h-[calc(100vh-12rem)] py-4">
@@ -5,17 +7,59 @@ export default function BTSSIO() {
         <h1 className="text-3xl font-bold mb-6 text-center">Mon BTS SIO option SLAM</h1>
         
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-blue-600 mb-4">La formation</h2>
-          <p className="mb-4 text-gray-700">
-            Le BTS SIO (Services Informatiques aux Organisations) avec l'option SLAM (Solutions Logicielles et Applications Métiers) 
-            est une formation de niveau Bac+2 qui forme des professionnels capables de concevoir, développer et maintenir des solutions 
-            informatiques pour les entreprises.
-          </p>
-          <p className="mb-4 text-gray-700">
-            L'option SLAM est orientée vers le développement d'applications, la gestion de bases de données, 
-            et la mise en place de solutions logicielles. Elle permet d'acquérir des compétences en programmation, 
-            en architecture logicielle, en cybersécurité et en gestion de projets informatiques.
-          </p>
+          <h2 className="text-2xl font-semibold text-blue-600 mb-6">La formation</h2>
+          
+          {/* Présentation générale du BTS SIO */}
+          <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-md mb-6">
+            <h3 className="text-xl font-semibold text-blue-800 mb-3">BTS SIO</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Le BTS SIO (Services Informatiques aux Organisations) est une formation de niveau Bac+2 qui forme des professionnels 
+              de l'informatique. Cette formation permet d'acquérir des compétences techniques, organisationnelles et relationnelles 
+              nécessaires pour travailler dans le domaine des services informatiques. Le programme couvre un large éventail de 
+              domaines, incluant le développement, la cybersécurité, les réseaux et la gestion de projets.
+            </p>
+          </div>
+
+          {/* Options SLAM et SISR en grid */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Option SLAM */}
+            <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="p-2 bg-blue-100 rounded-lg">
+                  <Code2 className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-blue-800">Option SLAM</h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                L'option SLAM (Solutions Logicielles et Applications Métiers) forme des spécialistes du développement d'applications. 
+                Les étudiants apprennent à concevoir, développer et maintenir des solutions logicielles. Ils acquièrent des compétences 
+                en programmation, en gestion de bases de données, en architecture logicielle et en développement web.
+              </p>
+              <div className="mt-4 p-3 bg-blue-50 rounded-lg">
+                <p className="text-sm text-blue-700 font-medium">Débouchés :</p>
+                <p className="text-sm text-gray-600">Développeur, Analyste programmeur, Chef de projets informatiques</p>
+              </div>
+            </div>
+
+            {/* Option SISR */}
+            <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="p-2 bg-blue-100 rounded-lg">
+                  <Server className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-blue-800">Option SISR</h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                L'option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) forme des experts en infrastructure informatique. 
+                Les étudiants apprennent à installer, configurer et gérer les réseaux et systèmes informatiques des entreprises. 
+                Ils se spécialisent dans la sécurité, l'administration système et la maintenance des infrastructures.
+              </p>
+              <div className="mt-4 p-3 bg-blue-50 rounded-lg">
+                <p className="text-sm text-blue-700 font-medium">Débouchés :</p>
+                <p className="text-sm text-gray-600">Administrateur réseau, Technicien système, Responsable infrastructure</p>
+              </div>
+            </div>
+          </div>
         </section>
         
         <section className="mb-8">
@@ -38,7 +82,7 @@ export default function BTSSIO() {
               <span className="font-medium">Air France, Prévention Cybersécurité</span> — Stage de 1ère année à Tremblay en France (93290), juin 2024
             </p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
-              <li>Analyse statistique des campagnes de phishing au sein de l'entreprise</li>
+              <li>Analyse statistique des vulnérabilités de sécurité informatique au sein des métiers de l'entreprise</li>
               <li>Apprentissage des méthodes et outils du métier de RSSI (Responsable de la Sécurité des Systèmes d'Information)</li>
               <li>Formation aux techniques de détection et neutralisation des menaces (CTH - Cyber Threat Hunting)</li>
               <li>Participation à la sensibilisation des employés aux bonnes pratiques de sécurité informatique</li>
